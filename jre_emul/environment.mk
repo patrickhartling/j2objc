@@ -153,7 +153,7 @@ endif
 # The -fobjc flags match XCode (a link fails without them because of
 # missing symbols of the form OBJC_CLASS_$_[classname]).
 OBJCFLAGS += $(WARNINGS) -fno-strict-overflow \
-  -fobjc-abi-version=2 -fobjc-legacy-dispatch $(DEBUGFLAGS) \
+  -fobjc-abi-version=2 -fobjc-legacy-dispatch -fembed-bitcode $(DEBUGFLAGS) \
   -I/System/Library/Frameworks/ExceptionHandling.framework/Headers \
   -I/System/Library/Frameworks/Security.framework/Headers \
   -I$(ANDROID_INCLUDE) $(NATIVE_SOURCE_DIRS:%=-I%)
